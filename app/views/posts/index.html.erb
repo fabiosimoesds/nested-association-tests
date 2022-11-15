@@ -1,0 +1,9 @@
+<div class="container">
+  <% @posts.each do |post| %>
+  <div class="title"><%= post.title %></div>
+    <div class="post-description"><%= post.description %></div>
+    <% post.comments.each do |comment| %>
+      <div class="comment-description"><%= comment.description %></div>
+    <% end %>
+  <% end %>
+</div>
